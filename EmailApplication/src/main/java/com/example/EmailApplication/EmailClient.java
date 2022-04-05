@@ -1,13 +1,13 @@
 package com.example.EmailApplication;
 
 public class EmailClient {
-    private BasicSpellChecker basicSpellChecker;
+    private SpellChecker spellChecker;
 
-    EmailClient(){
-        this.basicSpellChecker = new BasicSpellChecker();
+    EmailClient(SpellChecker spellChecker){
+        this.spellChecker = spellChecker;
     }
 
     public void sendEmail(String emailMessage) {
-        basicSpellChecker.checkSpelling(emailMessage);
+        spellChecker.checkSpelling(emailMessage);
     }
 }

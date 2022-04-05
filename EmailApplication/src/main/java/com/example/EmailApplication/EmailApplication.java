@@ -9,7 +9,7 @@ public class EmailApplication {
 	public static void main(String[] args) {
 
 //		SpringApplication.run(EmailApplication.class, args);
-		EmailClient emailClient = new EmailClient();
+		EmailClient emailClient = new EmailClient(new AdvancedSpellChecker());
 
 		emailClient.sendEmail("Hey, " + "This is the first email message :)");
 

@@ -1,6 +1,6 @@
 package com.example.EmailApplication;
 
-public class AdvancedSpellChecker {
+public class AdvancedSpellChecker implements SpellChecker{
     public void checkSpelling(String emailMessage){
         if(emailMessage != null){
 //            Determine the language of the email message

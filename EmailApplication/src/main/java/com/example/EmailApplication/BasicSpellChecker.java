@@ -1,6 +1,6 @@
 package com.example.EmailApplication;
 
-public class BasicSpellChecker {
+public class BasicSpellChecker implements SpellChecker{
     public void checkSpelling(String emailMessage) {
         if (emailMessage != null) {
             System.out.println("Checking spelling using BasicSpellChecker...");

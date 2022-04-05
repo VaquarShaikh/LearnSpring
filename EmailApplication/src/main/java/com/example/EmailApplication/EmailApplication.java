@@ -23,6 +23,13 @@ public class EmailApplication {
 		emailClient.sendEmail("Hey, " +
 				"This is my second email message.");
 
+
+		AdvancedSpellChecker advancedSpellChecker = applicationContext.getBean("advancedSpellChecker" , AdvancedSpellChecker.class);
+		System.out.println(advancedSpellChecker);
+		AdvancedSpellChecker advancedSpellChecker1 = applicationContext.getBean("advancedSpellChecker" , AdvancedSpellChecker.class);
+		System.out.println(advancedSpellChecker1);
+
+
 	}
 
 }

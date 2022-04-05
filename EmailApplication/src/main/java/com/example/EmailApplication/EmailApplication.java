@@ -14,6 +14,9 @@ public class EmailApplication {
 
 		ApplicationContext applicationContext =
 				new AnnotationConfigApplicationContext(AppConfig.class);
+
+//		ApplicationContext applicationContext =
+//				new ClassPathXmlApplicationContext("beans.xml");
 		EmailClient emailClient = applicationContext.getBean("emailClient", EmailClient.class);
 		emailClient.sendEmail("Hey, " +
 				"This is my first email message.");

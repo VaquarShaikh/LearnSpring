@@ -1,6 +1,10 @@
 package com.example.EmailApplication;
 
+import org.springframework.boot.ApplicationContextFactory;
 import org.springframework.boot.SpringApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 //import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 //@SpringBootApplication
@@ -8,14 +12,29 @@ public class EmailApplication {
 
 	public static void main(String[] args) {
 
-//		SpringApplication.run(EmailApplication.class, args);
-		EmailClient emailClient = new EmailClient(new AdvancedSpellChecker());
-
-		emailClient.sendEmail("Hey, " + "This is the first email message :)");
-
-		emailClient.sendEmail("Hey, " + "This is the second email message :)");
-
+		ApplicationContext applicationContext =
+				new ClassPathXmlApplicationContext("beans.xml");
+		EmailClient emailClient = applicationContext.getBean("emailClient", EmailClient.class);
+		emailClient.sendEmail("Hey, " +
+				"This is my first email message.");
+		emailClient.sendEmail("Hey, " +
+				"This is my second email message.");
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

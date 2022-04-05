@@ -5,6 +5,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BasicSpellChecker implements SpellChecker{
+
+    public void init(){
+        System.out.println("init inside basic spell checker");
+    }
+
     public void checkSpelling(String emailMessage) {
         if (emailMessage != null) {
             System.out.println("Checking spelling using BasicSpellChecker...");
@@ -15,4 +20,7 @@ public class BasicSpellChecker implements SpellChecker{
         }
     }
 
+    public void destroy(){
+        System.out.println("destroy inside basic spell checker");
+    }
 }

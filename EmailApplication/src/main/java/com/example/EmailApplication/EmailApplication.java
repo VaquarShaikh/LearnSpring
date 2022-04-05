@@ -30,6 +30,7 @@ public class EmailApplication {
 		System.out.println(advancedSpellChecker1);
 
 
+		((AnnotationConfigApplicationContext) applicationContext).registerShutdownHook();
 	}
 
 }
